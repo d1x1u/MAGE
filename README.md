@@ -10,6 +10,9 @@ Checkpoints are released.
 ## Usage
 ### Requirements
 
+### Checkpoints
+[baiduwangpan](https://pan.baidu.com/s/1y29yoES_N3f3f5iBEI-Blw), extraction code: **hsmk**
+
 ### command
 ```python
 python main.py
