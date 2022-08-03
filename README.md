@@ -9,11 +9,12 @@ Checkpoints are released.
 
 ## Prerequisites
 - Environment
+
 - Dataset
-  - [baiduwangpan](), extraction code: **zzzz**
+  - [baiduwangpan](https://pan.baidu.com/s/1aeVm8dCaw9xEBFV6vRE5qQ), extraction code: **d7x3**
   - [Google Drive]()
 - Checkpoints
-  - [baiduwangpan](https://pan.baidu.com/s/184nL1r0liJrTmLQMvZyHWg), extraction code: **dw6v**
+  - [baiduwangpan](https://pan.baidu.com/s/1yuZ4PhqgjBB172y_LYpSUg), extraction code: **safz**
   - [Google Drive](https://drive.google.com/drive/folders/1uskMQo5APOito0RNS-rfpaXBvA9ytaXg?usp=sharing)
 
 ## command
