@@ -3,7 +3,7 @@
 ## Description
 This is the official PyTorch implementation of the MAGE paper.
 
-This repository will be fully completed after the article is accepted
+This repository will be fully completed after the article is accepted.
 
 Checkpoints are released.
 
