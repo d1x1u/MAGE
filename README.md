@@ -13,6 +13,8 @@ Checkpoints are released.
 ### Checkpoints
 [baiduwangpan](https://pan.baidu.com/s/184nL1r0liJrTmLQMvZyHWg), extraction code: **dw6v**
 
+[Google Drive](https://drive.google.com/drive/folders/1uskMQo5APOito0RNS-rfpaXBvA9ytaXg?usp=sharing)
+
 ### command
 ```python
 python main.py
