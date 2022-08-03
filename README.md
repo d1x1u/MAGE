@@ -11,7 +11,7 @@ Checkpoints are released.
 ### Requirements
 
 ### Checkpoints
-[baiduwangpan](https://pan.baidu.com/s/1y29yoES_N3f3f5iBEI-Blw), extraction code: **hsmk**
+[baiduwangpan](https://pan.baidu.com/s/184nL1r0liJrTmLQMvZyHWg), extraction code: **dw6v**
 
 ### command
 ```python
