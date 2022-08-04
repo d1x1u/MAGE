@@ -1,11 +1,10 @@
 # MAGE: Multisource Attention Networks with Discriminative Graph and Informative Entities for Classification of Hyperspectral and LiDAR Data
 
 ## Description
-This is the official PyTorch implementation of the MAGE paper (TGRS under review).
+This is the official PyTorch implementation of the MAGE paper (**TGRS under review**).
+<div align=center><img src="Figures/flowchart.png" width = "66%"/></div>
 
 This repository will be fully completed after the article is accepted.
-
-Checkpoints are released.
 
 ## Prerequisites
 - Dependency
@@ -45,7 +44,7 @@ python main.py
 - [FusAtNet: Dual Attention Based SpectroSpatial Multimodal Fusion Network for Hyperspectral and LiDAR classification](https://openaccess.thecvf.com/content_CVPRW_2020/html/w6/Mohla_FusAtNet_Dual_Attention_Based_SpectroSpatial_Multimodal_Fusion_Network_for_Hyperspectral_CVPRW_2020_paper.html)
 - [S²ENet: Spatial–Spectral Cross-Modal Enhancement Network for Classification of Hyperspectral and LiDAR Data](https://ieeexplore.ieee.org/abstract/document/9583936)
 - [Deep Encoder–Decoder Networks for Classification of Hyperspectral and LiDAR Data](https://ieeexplore.ieee.org/abstract/document/9179756)
-- [More diverse Means Better](https://ieeexplore.ieee.org/document/9174822/)
+- [More diverse means better: Multimodal deep learning meets remote-sensing imagery classification](https://ieeexplore.ieee.org/document/9174822/)
 - [Learning from labeled and unlabeled data with label propagation](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.14.3864&rep=rep1&type=pdf)
 
 ## Citation
@@ -55,4 +54,5 @@ If you find this code to be useful for your research, please consider citing.
 
 ## Acknowledgements
  - [NVIDIA/DALI - A GPU-accelerated library containing highly optimized building blocks and an execution engine for data processing to accelerate deep learning training and inference applications.](https://github.com/NVIDIA/DALI)
+ - [pyg-team/pytorch_geometric - Graph Neural Network Library for PyTorch](https://github.com/pyg-team/pytorch_geometric)
  - [wandb - A tool for visualizing and tracking your machine learning experiments.](https://github.com/wandb/wandb)
