@@ -49,6 +49,10 @@ python main.py
 - [Learning from labeled and unlabeled data with label propagation](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.14.3864&rep=rep1&type=pdf)
 
 ## Citation
-If you find our work helpful, please kindly cite:
+If you find this code to be useful for your research, please consider citing.
 ```
 ```
+
+## Acknowledgements
+ - [NVIDIA/DALI - A GPU-accelerated library containing highly optimized building blocks and an execution engine for data processing to accelerate deep learning training and inference applications.](https://github.com/NVIDIA/DALI)
+ - [wandb - A tool for visualizing and tracking your machine learning experiments.](https://github.com/wandb/wandb)
