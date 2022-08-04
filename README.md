@@ -1,11 +1,10 @@
 # MAGE: Multisource Attention Networks with Discriminative Graph and Informative Entities for Classification of Hyperspectral and LiDAR Data
 
 ## Description
-This is the official PyTorch implementation of the MAGE paper (TGRS under review).
+This is the official PyTorch implementation of the MAGE paper (**TGRS under review**).
+<div align=center><img src="Figures/flowchart.png" width = "66%"/></div>
 
 This repository will be fully completed after the article is accepted.
-
-Checkpoints are released.
 
 ## Prerequisites
 - Dependency
@@ -56,3 +55,4 @@ If you find this code to be useful for your research, please consider citing.
 ## Acknowledgements
  - [NVIDIA/DALI - A GPU-accelerated library containing highly optimized building blocks and an execution engine for data processing to accelerate deep learning training and inference applications.](https://github.com/NVIDIA/DALI)
  - [wandb - A tool for visualizing and tracking your machine learning experiments.](https://github.com/wandb/wandb)
+ - [pyg-team/pytorch_geometric - Graph Neural Network Library for PyTorch](https://github.com/pyg-team/pytorch_geometric)
