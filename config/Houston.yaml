@@ -1,0 +1,89 @@
+# general options
+seed: 20
+dataset_dir: "./dataset/Houston/processed"
+H: 349
+W: 1905
+num_labels: 15029
+class_num: 15
+step: 1
+num_workers: 8 # For PyTorch dataLoader
+num_threads: 16 # For Nvidia DALI
+dali_file_root: "./dataset/Houston/dali"
+
+# network options
+hsi_bands_num: 144
+use_pca: True
+pca_component: 64
+hsi_channels: [128, 256, 512]
+lidar_bands_num: 1
+lidar_channels: [8, 16, 32]
+use_swish: False
+spat_att_mode: 2 # 0: No spatial attention module; 1: CA module; 2: custom spatial attention module.
+att_after_first_mode: 2 # 0: No attention module; 1: ECA module; 2: CA module; 3: custom spectral attention module.
+spec_att_mode: 1 # 0: No spectral attention module; 1: ECA module; 2: CA module; 3: custom spectral attention module.
+
+# Contrastive Learning options
+reload_cluster: True
+model_path_cluster: "save/Houston/clustering"
+best_model_path_cluster: "./checkpoint/Houston/BYOL"
+
+## 2. BYOL
+fastmode: True
+patch_size: 11
+mlp_hidden_size: 4096
+projection_size: 512
+batch_size: 512
+epochs_cluster: 100
+warmup_epochs: 7
+lr_cluster: 0.18652080502993085
+lr_cluster_min: 0.00001
+momentum: 0.99
+epochs_finetune_linear: 200
+epochs_finetune_full: 100
+batch_size_finetune: 16
+lr_finetune_linear: 0.019252485577407195
+lr_finetune_full: 0.00005
+lr_finetune_multiplier: 100
+weight_decay_finetune: 0.
+
+# GNN train options
+num_replicates: 10
+epochs_gnn: 1000
+use_warmup_gnn: True
+warmup_epochs_gnn: 19
+lr_gnn: 0.0075632798851755538
+lr_gnn_min: 0.00001
+weight_decay_gnn: 0.0018746255850932592
+mode: "GAT"
+# 3 for gards with Memory > 12GB. When I use RTX 3090 with configuration file `Trento.yaml`, I get the reported result in paper.
+num_layers: 2
+hidden_channels: 64
+heads: 3
+dropout: 0.4782640662607789
+att_dropout: 0.14516824317730756
+sigma: 1
+
+## control how to construct the adjacency matrix.
+emphasize_smooth: True
+use_ksam: False
+delta_ksam: 0.55
+mul_lidar: False
+lambd: 0.1741618950400053
+mul_spat: True
+beta: 0.4956604560844902
+p: 2.0 # L2 distance for lidarDist.
+## parameters for fixed neighbor setting method.
+neighbors_num: 7
+
+mlp_num_layers: 5
+mlp_hidden_channels: 128
+mlp_dropout: 0.30324099571019747
+
+lp_num_layers: 58
+lp_alpha: 0.8624608244091321
+
+train_samples_per_cls: 150 # 100
+val_samples_per_cls: 50
+display_interval: 10
+
+model_path_gnn: "save/Houston/gnn"

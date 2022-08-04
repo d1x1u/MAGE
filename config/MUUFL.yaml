@@ -1,0 +1,84 @@
+# general options
+seed: 20
+dataset_dir: "./dataset/MUUFL/processed"
+H: 325
+W: 220
+num_labels: 53687
+class_num: 11
+step: 1
+num_workers: 8 # For PyTorch dataLoader
+num_threads: 16 # For Nvidia DALI
+dali_file_root: "./dataset/MUUFL/dali"
+
+# network options
+hsi_bands_num: 64
+use_pca: True
+pca_component: 32
+hsi_channels: [128, 256, 512]
+lidar_bands_num: 2
+lidar_channels: [8, 16, 32]
+use_swish: False
+spat_att_mode: 2 # 0: No spatial attention module; 1: CA module; 2: custom spatial attention module.
+att_after_first_mode: 2 # 0: No attention module; 1: ECA module; 2: CA module; 3: custom spectral attention module.
+spec_att_mode: 1 # 0: No spectral attention module; 1: ECA module; 2: CA module; 3: custom spectral attention module.
+
+# Contrastive Learning options
+reload_cluster: True
+model_path_cluster: "save/MUUFL/clustering"
+best_model_path_cluster: "./checkpoint/MUUFL/BYOL"
+
+## 2. BYOL
+fastmode: False
+patch_size: 9
+mlp_hidden_size: 4096
+projection_size: 256
+batch_size: 512
+epochs_cluster: 100
+warmup_epochs: 5
+lr_cluster: 0.03
+lr_cluster_min: 0.00001
+momentum: 0.99
+epochs_finetune_linear: 200
+epochs_finetune_full: 100
+batch_size_finetune: 16
+lr_finetune_linear: 0.005
+lr_finetune_full: 0.00005
+lr_finetune_multiplier: 100
+weight_decay_finetune: 0.
+
+mlp_num_layers: 4
+mlp_hidden_channels: 256
+mlp_dropout: 0.4758375255778486
+# GNN train options
+num_replicates: 10
+epochs_gnn: 1000
+use_warmup_gnn: True
+warmup_epochs_gnn: 5
+lr_gnn: 0.03632798851755538
+lr_gnn_min: 0.00001
+weight_decay_gnn: 0.0040707700790196975
+mode: "GAT"
+num_layers: 3
+hidden_channels: 64
+heads: 4
+dropout: 0.4214432863598079
+att_dropout: 0.10625353137765568
+sigma: 1
+
+## control how to construct the adjacency matrix.
+emphasize_smooth: True
+use_ksam: False
+delta_ksam: 0.55
+mul_lidar: False
+lambd: 0.0017467580587992452
+mul_spat: True
+beta: 0.
+p: 2.0 # L2 distance for lidarDist.
+## parameters for fixed neighbor setting method.
+neighbors_num: 15
+
+train_samples_per_cls: 150 #150 # 100AA
+val_samples_per_cls: 50
+display_interval: 20
+
+model_path_gnn: "save/MUUFL/gnn"

@@ -1,0 +1,88 @@
+# general options
+seed: 20
+dataset_dir: "./dataset/Trento/processed"
+H: 166
+W: 600
+num_labels: 30214
+class_num: 6
+step: 1
+num_workers: 8 # For PyTorch dataLoader
+num_threads: 16 # For Nvidia DALI
+dali_file_root: "./dataset/Trento/dali"
+
+# network options
+hsi_bands_num: 63
+use_pca: True
+pca_component: 32
+hsi_channels: [128, 256, 512]
+lidar_bands_num: 1
+lidar_channels: [8, 16, 32]
+use_swish: False
+spat_att_mode: 2 # 0: No spatial attention module; 1: CA module; 2: custom spatial attention module.
+att_after_first_mode: 2 # 0: No attention module; 1: ECA module; 2: CA module; 3: custom spectral attention module.
+spec_att_mode: 1 # 0: No spectral attention module; 1: ECA module; 2: CA module; 3: custom spectral attention module.
+
+# Contrastive Learning options
+reload_cluster: True
+model_path_cluster: "save/Trento/clustering"
+best_model_path_cluster: "./checkpoint/Trento/BYOL"
+
+## 2. BYOL
+fastmode: True
+patch_size: 11
+mlp_hidden_size: 2048
+projection_size: 512
+batch_size: 512
+epochs_cluster: 100
+warmup_epochs: 9
+lr_cluster: 0.17364125016217496
+lr_cluster_min: 0.00001
+momentum: 0.99
+epochs_finetune_linear: 200
+epochs_finetune_full: 100
+batch_size_finetune: 16
+lr_finetune_linear: 0.002771581526574952
+lr_finetune_full: 0.00005
+lr_finetune_multiplier: 100
+weight_decay_finetune: 0.
+
+# GNN train options
+num_replicates: 10
+epochs_gnn: 1000
+use_warmup_gnn: True
+warmup_epochs_gnn: 17
+lr_gnn: 0.03632798851755538
+lr_gnn_min: 0.00001
+weight_decay_gnn: 0.00584194699993126
+mode: "GAT"
+num_layers: 2
+hidden_channels: 64
+heads: 6
+dropout: 0.38078164129028114
+att_dropout: 0.1864360615605929
+sigma: 1
+
+## control how to construct the adjacency matrix.
+emphasize_smooth: False
+use_ksam: False
+delta_ksam: 0.55
+mul_lidar: False
+lambd: 0.10963778149209036
+mul_spat: False
+beta: 0.17510584190816258
+p: 2.0 # L2 distance for lidarDist.
+## parameters for fixed neighbor setting method.
+neighbors_num: 12
+
+mlp_num_layers: 3
+mlp_hidden_channels: 64
+mlp_dropout: 0.2
+
+lp_num_layers: 100
+lp_alpha: 0.999
+
+train_samples_per_cls: 150 # 100
+val_samples_per_cls: 50
+display_interval: 10
+
+model_path_gnn: "save/Trento/gnn"
