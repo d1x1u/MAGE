@@ -1,7 +1,7 @@
 # MAGE: Multisource Attention Networks with Discriminative Graph and Informative Entities for Classification of Hyperspectral and LiDAR Data
 
 ## Description
-This is the official PyTorch implementation of the MAGE paper.
+This is the official PyTorch implementation of the MAGE paper (TGRS under review).
 
 This repository will be fully completed after the article is accepted.
 
