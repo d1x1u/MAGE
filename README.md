@@ -17,14 +17,15 @@ Checkpoints are released.
   - [baiduwangpan](https://pan.baidu.com/s/1yuZ4PhqgjBB172y_LYpSUg), extraction code: **safz**
   - [Google Drive](https://drive.google.com/drive/folders/1uskMQo5APOito0RNS-rfpaXBvA9ytaXg?usp=sharing)
 
-## command
-- Train
-```python
-python main.py
-```
-- Evaluation
+## Usage
+After configuring the environment and replacing the dataset and checkpoint folders with contents from the above links, one can use the following commands to **use checkpoints for evaluation** or **train from scratch**.
+- Evaluation with checkpoints
 ```python
 python test.py
+```
+- Train from scratch
+```python
+python main.py
 ```
 
 ## Baseline
