@@ -1,10 +1,12 @@
-# MAGE: Multisource Attention Networks with Discriminative Graph and Informative Entities for Classification of Hyperspectral and LiDAR Data
+# [MAGE: Multisource Attention Networks with Discriminative Graph and Informative Entities for Classification of Hyperspectral and LiDAR Data](https://ieeexplore.ieee.org/document/9904571)
 
 ## Description
-This is the official PyTorch implementation of the MAGE paper (**TGRS under review**).
+This is the official PyTorch implementation of the MAGE paper (**TGRS**).
 <div align=center><img src="Figures/flowchart.png" width = "66%"/></div>
 
-This repository will be fully completed after the article is accepted.
+## TODO List
+- [ ] Refactoring
+- [ ] A Docker containing all environments
 
 ## Prerequisites
 - Dependency
@@ -50,6 +52,15 @@ python main.py
 ## Citation
 If you find this code to be useful for your research, please consider citing.
 ```
+@ARTICLE{9904571,
+  author={Xiu, Di and Pan, Zongxu and Wu, Yirong and Hu, Yuxin},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={MAGE: Multisource Attention Network with Discriminative Graph and Informative Entities for Classification of Hyperspectral and LiDAR Data}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TGRS.2022.3210398}}
 ```
 
 ## Acknowledgements
