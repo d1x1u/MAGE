@@ -2,6 +2,11 @@
 
 ## Description
 This is the official PyTorch implementation of the MAGE paper (**TGRS**).
+
+All criticisms, suggestions, questions are welcome.
+
+## Overview
+
 <div align=center><img src="Figures/flowchart.png" width = "66%"/></div>
 
 ## TODO List
